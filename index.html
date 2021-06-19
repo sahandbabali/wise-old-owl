@@ -27,35 +27,10 @@
       </div>
 
       <div class="row">
-        <div id="coltextleft" class="col m6">
-          <div class="row">
-            <form class="col s12">
-              <div class="row">
-                <div class="input-field col s12">
-                  <textarea
-                    id="textarea2"
-                    class="materialize-textarea"
-                  ></textarea>
-                  <label for="textarea2">Question</label>
-                </div>
-              </div>
-            </form>
-          </div>
-          <button
-            class="btn waves-effect waves-light"
-            type="submit"
-            id="subbot"
-            name="action"
-          >
-            Submit
-            <i class="material-icons right">send</i>
-          </button>
-
-          <div id="answercard"></div>
-        </div>
-        <div id="coltextright" class="col m6">
-          <div class="row">
-            <form class="col s12">
+        <div id="coltextright" class="col m6 s12">
+          <h3>1. Input passage</h3>
+          <div class="backwhite">
+            <form>
               <div class="row">
                 <div class="input-field col s12">
                   <textarea
@@ -66,19 +41,49 @@
                 </div>
               </div>
             </form>
+            <p>or</p>
+            <form action="#">
+              <div class="file-field input-field">
+                <div class="btn">
+                  <span>File</span>
+                  <input type="file" />
+                </div>
+                <div class="file-path-wrapper">
+                  <input class="file-path validate" type="text" />
+                </div>
+              </div>
+            </form>
           </div>
-          <p>or</p>
-          <form action="#">
-            <div class="file-field input-field">
-              <div class="btn">
-                <span>File</span>
-                <input type="file" />
+        </div>
+
+        <!-- second div -->
+
+        <div id="coltextleft" class="col m6 s12">
+          <h3>2. Ask a question</h3>
+          <div class="backwhite">
+            <form>
+              <div>
+                <div class="input-field col s12">
+                  <textarea
+                    id="textarea2"
+                    class="materialize-textarea"
+                  ></textarea>
+                  <label for="textarea2">Question</label>
+                </div>
               </div>
-              <div class="file-path-wrapper">
-                <input class="file-path validate" type="text" />
-              </div>
-            </div>
-          </form>
+            </form>
+            <button
+              class="btn waves-effect waves-light"
+              type="submit"
+              id="subbot"
+              name="action"
+            >
+              Submit
+              <i class="material-icons right">send</i>
+            </button>
+
+            <div id="answercard"></div>
+          </div>
         </div>
       </div>
     </div>

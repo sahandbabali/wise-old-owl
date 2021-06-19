@@ -1,6 +1,7 @@
 body {
       background-color: #0097e6;
       color: white;
+      font-family: Open sans;
 }
 
 #header {
@@ -20,11 +21,18 @@ body {
 }
 
 
-#coltextright {
+/* #coltextright {
       background-color: white;
       color: black;
 }
 
 #coltextleft {
       background-color: white;
+} */
+
+
+.backwhite {
+      background-color: white;
+      color: black;
+      padding: 2rem;
 }
