@@ -36,3 +36,17 @@ body {
       color: black;
       padding: 2rem;
 }
+
+#spinnerbox {
+      text-align: center;
+}
+
+#footer {
+      margin-top: 2rem;
+      text-align: center;
+      
+}
+
+#footer a {
+      color: white;
+}

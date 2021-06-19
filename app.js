@@ -2,14 +2,20 @@ var passage = "";
 var question = "";
 
 async function answer_questions() {
+  document.getElementById(
+    "answercard"
+  ).innerHTML = `              <div id="spinnerbox">
+  <img src="spinner.gif" alt="" srcset="" />
+</div>`;
+
   let model = await qna.load();
   // or you can specify the model url.
   //config = {modelUrl: 'https://yourown-server/qna/model.json'};
   //customModel = await qna.load(config);
   passage = document.getElementById("textarea1").value;
-  console.log(passage);
+  // console.log(passage);
   question = document.getElementById("textarea2").value;
-  console.log(question);
+  // console.log(question);
   const answers = await model.findAnswers(question, passage);
   console.log(answers);
 
@@ -30,6 +36,7 @@ async function answer_questions() {
     </div>
   </div>
   </div>`;
+  document.getElementById("answercard").innerHTML = ``;
   document.getElementById("answercard").innerHTML = card;
 }
 
