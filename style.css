@@ -1,0 +1,30 @@
+body {
+      background-color: #0097e6;
+      color: white;
+}
+
+#header {
+      text-align: center;
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+}
+
+#header * {
+
+      display: inline;
+      vertical-align: middle;
+}
+
+#owl1 {
+      width: 8rem;
+}
+
+
+#coltextright {
+      background-color: white;
+      color: black;
+}
+
+#coltextleft {
+      background-color: white;
+}
