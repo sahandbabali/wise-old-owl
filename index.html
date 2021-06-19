@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wise Old Owl</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/qna"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/qna"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
@@ -44,29 +44,14 @@
           <button
             class="btn waves-effect waves-light"
             type="submit"
+            id="subbot"
             name="action"
           >
             Submit
             <i class="material-icons right">send</i>
           </button>
 
-          <div class="row">
-            <div class="col s12 m12">
-              <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-                  <span class="card-title">Card Title</span>
-                  <p>
-                    I am a very simple card. I am good at containing small bits
-                    of information. I am convenient because I require little
-                    markup to use effectively.
-                  </p>
-                </div>
-                <div class="card-action">
-                  <a href="#">This is a link</a>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div id="answercard"></div>
         </div>
         <div id="coltextright" class="col m6">
           <div class="row">
@@ -98,6 +83,6 @@
       </div>
     </div>
 
-    <!-- <script src="app.js"></script> -->
+    <script src="app.js"></script>
   </body>
 </html>

@@ -1,14 +1,37 @@
+var passage = "";
+var question = "";
+
 async function answer_questions() {
   let model = await qna.load();
   // or you can specify the model url.
   //config = {modelUrl: 'https://yourown-server/qna/model.json'};
   //customModel = await qna.load(config);
-  const passage =
-    "Google LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, search engine, cloud computing, software, and hardware. It is considered one of the Big Four technology companies, alongside Amazon, Apple, and Facebook. Google was founded in September 1998 by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University in California. Together they own about 14 percent of its shares and control 56 percent of the stockholder voting power through supervoting stock. They incorporated Google as a California privately held company on September 4, 1998, in California. Google was then reincorporated in Delaware on October 22, 2002. An initial public offering (IPO) took place on August 19, 2004, and Google moved to its headquarters in Mountain View, California, nicknamed the Googleplex. In August 2015, Google announced plans to reorganize its various interests as a conglomerate called Alphabet Inc. Google is Alphabet's leading subsidiary and will continue to be the umbrella company for Alphabet's Internet interests. Sundar Pichai was appointed CEO of Google, replacing Larry Page who became the CEO of Alphabet.";
-  const question = "Who is the CEO of Google?";
+  passage = document.getElementById("textarea1").value;
+  console.log(passage);
+  question = document.getElementById("textarea2").value;
+  console.log(question);
   const answers = await model.findAnswers(question, passage);
   console.log(answers);
+
+  let score = answers[0].score;
+  let text = answers[0].text;
+  var card = `<div class="row">
+  <div class="col s12 m12">
+    <div class="card blue-grey darken-1">
+      <div class="card-content white-text">
+        <span class="card-title">Answer</span>
+        <p>
+         ${text}
+        </p>
+      </div>
+      <div class="card-action">
+        <a href="#">Score: ${score}</a>
+      </div>
+    </div>
+  </div>
+  </div>`;
+  document.getElementById("answercard").innerHTML = card;
 }
 
 console.log("Starting");
-document.addEventListener("DOMContentLoaded", answer_questions);
+document.getElementById("subbot").addEventListener("click", answer_questions);
