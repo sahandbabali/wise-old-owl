@@ -10,7 +10,7 @@ body {
       margin-bottom: 5rem;
 }
 
-#header * {
+#header img,h1 {
 
       display: inline;
       vertical-align: middle;
@@ -50,3 +50,21 @@ body {
 #footer a {
       color: white;
 }
+
+
+@media only screen and (max-width: 600px) {
+      #header img {
+
+            display: inline;
+         text-align: center;
+      }
+      #header h1 {
+
+            display: block;
+         text-align: center;
+      }
+
+
+
+
+    }
